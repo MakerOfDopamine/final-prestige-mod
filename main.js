@@ -20,7 +20,7 @@ function getGrowthMulti() {
 function getGain() {
 	var gain = 1 + data.prestiges[0] + data.permananos;
 	for (var i = 1; i < 10; i++) {
-		gain *= 1 + data.prestiges[i];
+		gain = gain ** 1 + data.prestiges[i];
 	}
 	return gain + data.banked;
 }
