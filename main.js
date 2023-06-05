@@ -19,8 +19,8 @@ function getGrowthMulti() {
 
 function getGain() {
 	var gain = 1 + data.prestiges[0] + data.permananos;
-	for (var i = 1; i < 10; i++) {
-		gain = gain ** 1 + data.prestiges[i];
+	for (var i = 9; i > 0; i--) {
+		gain = (1 + data.prestiges[i]) ** gain;
 	}
 	return gain + data.banked;
 }
